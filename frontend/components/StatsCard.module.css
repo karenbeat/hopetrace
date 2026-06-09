@@ -1,0 +1,57 @@
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  background: rgba(22, 35, 24, 0.8);
+  border-color: #52B788;
+  box-shadow: 0 0 40px rgba(82, 183, 136, 0.2);
+}
+
+.iconWrapper {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, rgba(82, 183, 136, 0.15), rgba(27, 67, 50, 0.3));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(82, 183, 136, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  box-shadow: 0 0 40px rgba(82, 183, 136, 0.3);
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #FFFFFF, #74C69D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label {
+  font-size: 1rem;
+  color: #A8B9AE;
+  font-weight: 500;
+}

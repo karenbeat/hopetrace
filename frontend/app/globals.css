@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   VOLUNTEERCHAIN - GLOBAL STYLES
+   Tema: Impacto Social + Blockchain
+======================================== */
+
+:root {
+  /* Cores principais */
+  --green-dark: #1B4332;
+  --green-medium: #2D6A4F;
+  --green-vibrant: #52B788;
+  --green-neon: #74C69D;
+  
+  /* Fundos */
+  --bg-dark: #0A0F0D;
+  --bg-card: #111814;
+  --bg-card-hover: #162318;
+  
+  /* Texto */
+  --white: #FFFFFF;
+  --white-soft: #E8F5E9;
+  --gray-text: #A8B9AE;
+  
+  /* Medalhas */
+  --bronze: #CD7F32;
+  --silver: #C0C0C0;
+  --gold: #FFD700;
+  
+  /* Accent */
+  --purple-blockchain: #7B2FBE;
+  
+  /* Gradientes */
+  --gradient-hero: linear-gradient(135deg, #0A0F0D 0%, #1B4332 50%, #0A0F0D 100%);
+  --gradient-green: linear-gradient(135deg, #1B4332 0%, #52B788 100%);
+  --gradient-button: linear-gradient(90deg, #1B4332 0%, #2D6A4F 50%, #52B788 100%);
+  --gradient-text: linear-gradient(90deg, #52B788 0%, #74C69D 50%, #52B788 100%);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  
+  /* Glow */
+  --glow-green: 0 0 20px rgba(82, 183, 136, 0.3);
+  --glow-green-intense: 0 0 30px rgba(82, 183, 136, 0.5);
+  
+  /* Spacing */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 50px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s ease-out;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-dark);
+  color: var(--white);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* ========================================
+   ANIMACOES GLOBAIS
+======================================== */
+
+/* Fade In Up - entrada padrao */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse suave */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Pulse para badge */
+@keyframes pulseBadge {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(82, 183, 136, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(82, 183, 136, 0);
+  }
+}
+
+/* Glow pulsante */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: var(--glow-green);
+  }
+  50% {
+    box-shadow: var(--glow-green-intense);
+  }
+}
+
+/* Float suave */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Shimmer - efeito de brilho */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Rotate */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Line grow - linha que cresce */
+@keyframes lineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Typing cursor */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Ripple effect */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Confetti */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Stroke animation para SVG */
+@keyframes strokeDraw {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Progress bar fill */
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+}
+
+/* Progress bar glow */
+@keyframes progressGlow {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ========================================
+   COMPONENTES BASE
+======================================== */
+
+/* Container padrao */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition-medium);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--green-vibrant);
+  transform: translateY(-8px);
+  box-shadow: var(--glow-green);
+}
+
+/* Botao Primario */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: var(--gradient-button);
+  background-size: 200% 100%;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0;
+  box-shadow: var(--glow-green);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Ripple container */
+.btn-primary .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* Botao Secundario */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  transition: var(--transition-medium);
+}
+
+.btn-secondary:hover {
+  border-color: var(--green-vibrant);
+  color: var(--green-vibrant);
+  box-shadow: var(--glow-green);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-pulse {
+  animation: pulseBadge 2s infinite;
+}
+
+/* Gradiente no texto */
+.gradient-text {
+  background: var(--gradient-text);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section title */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  color: var(--gray-text);
+  font-size: 1.125rem;
+  max-width: 600px;
+}
+
+/* Linha decorativa animada */
+.decorative-line {
+  height: 3px;
+  background: var(--gradient-green);
+  border-radius: 2px;
+  margin-top: 16px;
+  animation: lineGrow 1s ease-out forwards;
+  transform-origin: left;
+}
+
+/* ========================================
+   FORMULARIOS
+======================================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--white-soft);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: 1rem;
+  transition: var(--transition-medium);
+}
+
+.form-input:focus {
+  border-color: var(--green-vibrant);
+  box-shadow: var(--glow-green);
+}
+
+.form-input::placeholder {
+  color: var(--gray-text);
+}
+
+/* ========================================
+   SKELETON LOADING
+======================================== */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 25%,
+    var(--bg-card-hover) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* ========================================
+   SCROLLBAR CUSTOMIZADA
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-medium);
+}
+
+/* ========================================
+   ACESSIBILIDADE - Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 24px;
+    font-size: 0.9375rem;
+  }
+}
