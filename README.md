@@ -205,6 +205,7 @@ HopeCertificate (6 testes)
 - Sistema de reputação on-chain para organizações
 - Notificações em tempo real via eventos blockchain
 - Dashboard analítico avançado com métricas de impacto territorial
+- Acentuação das palavras, tive um problema com a fonte e precisei remover toda a acentuação e pontuação
 
 ---
 
