@@ -225,6 +225,8 @@ Conforme política de transparência do Hackweb:
 |------------|-----|
 | Claude (Anthropic) | Formatação dos contratos, lógica de integração |
 | v0 (Vercel) | Geração inicial do frontend |
+| Gamma AI | Estética dos slides |
+
 
 A autoria intelectual, supervisão, tomada de decisões de produto e compreensão técnica são da desenvolvedora. Todo o código foi revisado, adaptado e integrado manualmente.
 
