@@ -223,8 +223,8 @@ Conforme política de transparência do Hackweb:
 
 | Ferramenta | Uso |
 |------------|-----|
-| Claude (Anthropic) | Arquitetura dos contratos, lógica de integração, orientação técnica passo a passo |
-| v0 (Vercel) | Geração inicial do frontend e componentes visuais |
+| Claude (Anthropic) | Formatação dos contratos, lógica de integração |
+| v0 (Vercel) | Geração inicial do frontend |
 
 A autoria intelectual, supervisão, tomada de decisões de produto e compreensão técnica são da desenvolvedora. Todo o código foi revisado, adaptado e integrado manualmente.
 
