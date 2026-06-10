@@ -10,6 +10,9 @@ Plataforma Web3 para registrar, validar e certificar ações humanitárias verif
 front end no windows usando dados mockados, exemplo de como o app pode se parecer futuramente após usos 
 
 ![Demo HopeTrace](assets/demo.gif)
+
+a partir daqui, todas as imagens e o video pitch foram feitos no linux
+
 ![Home](assets/screenshots/home.png)
 
 O HopeTrace é uma plataforma descentralizada que transforma ações humanitárias em registros verificáveis, auditáveis e transparentes na blockchain.
