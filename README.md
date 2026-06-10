@@ -8,6 +8,7 @@ Plataforma Web3 para registrar, validar e certificar ações humanitárias verif
 
 ## 📋 Sobre o Projeto
 front end no windows usando dados mockados, exemplo de como o app pode se parecer futuramente após usos 
+
 ![Demo HopeTrace](assets/demo.gif)
 ![Home](assets/screenshots/home.png)
 
